@@ -8,4 +8,4 @@ and returns the floor of the float.
 
 def floor(n: float) -> int:
    """ returning float floor"""
-    return math.floor(n)
+    return int(n)
