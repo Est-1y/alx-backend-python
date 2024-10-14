@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """asynchronous coroutine taking  in an integer argument
-with a default value of 10)"""
+with a default value of 10"""
 
 
 import asyncio
