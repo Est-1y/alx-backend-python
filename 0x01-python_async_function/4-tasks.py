@@ -3,11 +3,13 @@
 
 import asyncio
 from typing import List
-from asyncio import Task
 
 task_wait_random = __import__('3-tasks').task_wait_random
 
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
-    tasks = [task_wait_random(max_delay) for _ in range(n)]
-    return [await task for task in asyncio.as_completed(tasks)]
+    """executing task"""
+    wait_times = await asyncio.gather(
+        *tuple(map(lambda _: task_wait_random(max_delay), range(n)))
+    )
+    return sorted(wait_times)
