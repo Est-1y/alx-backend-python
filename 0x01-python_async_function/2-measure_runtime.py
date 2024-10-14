@@ -2,7 +2,7 @@
 """ Measure the runtime"""
 
 import time
-from asyncio import run
+import asyncio
 
 wait_n = __import__('1-concurrent_coroutines').wait_n
 
